@@ -4,39 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kobby Web Design</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    * {margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif;}
+    * {margin:0; padding:0; box-sizing:border-box; font-family: 'Montserrat', sans-serif;}
     body {line-height:1.6; color:#333;}
     a {text-decoration:none; color:inherit;}
     img {max-width:100%; display:block;}
-
     .container {width:90%; max-width:1200px; margin:0 auto; padding:50px 0;}
-    header {background:#4F46E5; color:#fff; padding:100px 0; text-align:center;}
-    header h1 {font-size:3rem; margin-bottom:20px;}
+    
+    header {background:#4F46E5; color:#fff; padding:80px 20px; text-align:center;}
+    header img {height:60px; margin-bottom:20px;}
+    header h1 {font-size:2.8rem; margin-bottom:15px;}
     header p {font-size:1.2rem; margin-bottom:30px;}
-    .btn {background:#fff; color:#4F46E5; padding:15px 30px; border-radius:5px; font-weight:bold; transition:0.3s;}
-    .btn:hover {background:#e0e0ff;}
+    .btn {background:#FFB800; color:#fff; padding:15px 30px; border-radius:5px; font-weight:bold; transition:0.3s;}
+    .btn:hover {background:#e6a200;}
+    
     section {padding:80px 0;}
     section h2 {text-align:center; margin-bottom:40px; font-size:2.2rem; color:#4F46E5;}
     .text-center {text-align:center;}
+    
+    /* Services */
     .services {display:flex; flex-wrap:wrap; gap:20px; justify-content:center;}
     .service-card {background:#f4f4f4; padding:30px; border-radius:10px; flex:1 1 250px; max-width:300px; transition:0.3s;}
     .service-card:hover {transform:translateY(-5px); box-shadow:0 10px 20px rgba(0,0,0,0.1);}
+    
+    /* Portfolio */
     .portfolio {display:flex; flex-wrap:wrap; gap:20px; justify-content:center;}
-    .portfolio-item {flex:1 1 250px; max-width:300px; border-radius:10px; overflow:hidden; border:1px solid #ddd;}
+    .portfolio-item {flex:1 1 250px; max-width:300px; border-radius:10px; overflow:hidden; border:1px solid #ddd; transition:0.3s;}
+    .portfolio-item:hover {transform:scale(1.05);}
     .portfolio-item img {display:block;}
     .portfolio-item h4 {padding:10px; text-align:center; background:#f4f4f4;}
+    
+    /* Testimonials */
+    .testimonial {background:#f4f4f4; padding:20px; margin:15px; border-radius:10px; max-width:400px; flex:1 1 300px;}
+    .testimonials-container {display:flex; flex-wrap:wrap; gap:20px; justify-content:center;}
+    
+    /* Contact Form */
     form {max-width:500px; margin:0 auto; display:flex; flex-direction:column; gap:15px;}
     input, textarea {padding:10px; border-radius:5px; border:1px solid #ccc; width:100%;}
     button {background:#4F46E5; color:#fff; padding:15px; border:none; border-radius:5px; font-weight:bold; cursor:pointer;}
     button:hover {background:#3730a3;}
+    
     footer {background:#333; color:#fff; text-align:center; padding:30px 0;}
+    
+    @media (max-width:768px) {
+      header h1 {font-size:2rem;}
+      .services, .portfolio, .testimonials-container {flex-direction:column; align-items:center;}
+    }
   </style>
 </head>
 <body>
 
   <!-- Hero -->
   <header>
+    <img src="images/logo.png" alt="Kobby Web Design Logo">
     <h1>Modern, Fast & Professional Websites</h1>
     <p>I help small businesses grow online with clean, mobile-friendly websites.</p>
     <a href="#contact" class="btn">Get Your Website Today</a>
@@ -90,6 +111,27 @@
         <div class="portfolio-item">
           <img src="images/trainer-website.png" alt="Personal Trainer Website">
           <h4>Personal Trainer</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <div class="container">
+      <h2>What Clients Say</h2>
+      <div class="testimonials-container">
+        <div class="testimonial">
+          <p>"Kobby built our website in just 3 days and it looks amazing!"</p>
+          <p><strong>– Barber Shop Owner</strong></p>
+        </div>
+        <div class="testimonial">
+          <p>"Our clothing store website finally matches our brand. Highly recommended!"</p>
+          <p><strong>– Clothing Brand Owner</strong></p>
+        </div>
+        <div class="testimonial">
+          <p>"Kobby’s website helped me get more clients every week. Fast and professional!"</p>
+          <p><strong>– Personal Trainer</strong></p>
         </div>
       </div>
     </div>
