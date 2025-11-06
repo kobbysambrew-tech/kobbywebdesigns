@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kobby Web Design</title>
+  <style>
+    /* Reset & base styles */
+    * {margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif;}
+    body {line-height:1.6; color:#333;}
+    a {text-decoration:none; color:inherit;}
+    img {max-width:100%; display:block;}
+
+    /* Container */
+    .container {width:90%; max-width:1200px; margin:0 auto; padding:50px 0;}
+
+    /* Hero */
+    header {background:#4F46E5; color:#fff; padding:100px 0; text-align:center;}
+    header h1 {font-size:3rem; margin-bottom:20px;}
+    header p {font-size:1.2rem; margin-bottom:30px;}
+    .btn {background:#fff; color:#4F46E5; padding:15px 30px; border-radius:5px; font-weight:bold; transition:0.3s;}
+    .btn:hover {background:#e0e0ff;}
+
+    /* Sections */
+    section {padding:80px 0;}
+    section h2 {text-align:center; margin-bottom:40px; font-size:2.2rem; color:#4F46E5;}
+    .text-center {text-align:center;}
+
+    /* Services */
+    .services {display:flex; flex-wrap:wrap; gap:20px; justify-content:center;}
+    .service-card {background:#f4f4f4; padding:30px; border-radius:10px; flex:1 1 250px; max-width:300px; transition:0.3s;}
+    .service-card:hover {transform:translateY(-5px); box-shadow:0 10px 20px rgba(0,0,0,0.1);}
+    .service-card h3 {margin-bottom:15px; color:#333;}
+    .service-card p {margin-bottom:20px;}
+
+    /* Portfolio */
+    .portfolio {display:flex; flex-wrap:wrap; gap:20px; justify-content:center;}
+    .portfolio-item {flex:1 1 250px; max-width:300px; border-radius:10px; overflow:hidden; border:1px solid #ddd;}
+    .portfolio-item img {display:block;}
+    .portfolio-item h4 {padding:10px; text-align:center; background:#f4f4f4;}
+
+    /* Contact Form */
+    form {max-width:500px; margin:0 auto; display:flex; flex-direction:column; gap:15px;}
+    input, textarea {padding:10px; border-radius:5px; border:1px solid #ccc; width:100%;}
+    button {background:#4F46E5; color:#fff; padding:15px; border:none; border-radius:5px; font-weight:bold; cursor:pointer;}
+    button:hover {background:#3730a3;}
+
+    /* Footer */
+    footer {background:#333; color:#fff; text-align:center; padding:30px 0;}
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <header>
+    <h1>Modern, Fast & Professional Websites</h1>
+    <p>I help small businesses grow online with clean, mobile-friendly websites.</p>
+    <a href="#contact" class="btn">Get Your Website Today</a>
+  </header>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container text-center">
+      <h2>About Me</h2>
+      <p>Hi, I’m Kobby. I build websites that help businesses look professional online and attract more customers. Fast delivery, clean design, and full ownership for you.</p>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="container">
+      <h2>Services & Pricing</h2>
+      <div class="services">
+        <div class="service-card">
+          <h3>Starter Website</h3>
+          <p>1–2 page website, mobile responsive, contact button, delivered in 48 hours.</p>
+          <p><strong>$150</strong></p>
+        </div>
+        <div class="service-card">
+          <h3>Standard Website</h3>
+          <p>3–5 page custom website, contact form, basic SEO, delivered in 3–5 days.</p>
+          <p><strong>$250–$350</strong></p>
+        </div>
+        <div class="service-card">
+          <h3>Premium Website</h3>
+          <p>5+ pages, booking forms, portfolio/gallery, custom animations, delivered in 5–10 days.</p>
+          <p><strong>$400–$600</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio">
+    <div class="container">
+      <h2>Portfolio</h2>
+      <div class="portfolio">
+        <div class="portfolio-item">
+          <img src="https://via.placeholder.com/300x200.png?text=Barber+Shop" alt="Barber Shop Website">
+          <h4>Barber Shop</h4>
+        </div>
+        <div class="portfolio-item">
+          <img src="https://via.placeholder.com/300x200.png?text=Clothing+Brand" alt="Clothing Brand Website">
+          <h4>Clothing Brand</h4>
+        </div>
+        <div class="portfolio-item">
+          <img src="https://via.placeholder.com/300x200.png?text=Trainer+Website" alt="Trainer Website">
+          <h4>Personal Trainer</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p class="text-center">Send me a message on Instagram: <strong>@kobbywebdesign</strong></p>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Kobby Web Design</p>
+  </footer>
+
+</body>
+</html>
