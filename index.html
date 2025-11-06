@@ -3,157 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kobby Web Design</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Your Website</title>
   <style>
-    * {margin:0; padding:0; box-sizing:border-box; font-family: 'Montserrat', sans-serif;}
-    body {line-height:1.6; color:#333;}
-    a {text-decoration:none; color:inherit;}
-    img {max-width:100%; display:block;}
-    .container {width:90%; max-width:1200px; margin:0 auto; padding:50px 0;}
-    
-    header {background:#4F46E5; color:#fff; padding:80px 20px; text-align:center;}
-    header img {height:60px; margin-bottom:20px;}
-    header h1 {font-size:2.8rem; margin-bottom:15px;}
-    header p {font-size:1.2rem; margin-bottom:30px;}
-    .btn {background:#FFB800; color:#fff; padding:15px 30px; border-radius:5px; font-weight:bold; transition:0.3s;}
-    .btn:hover {background:#e6a200;}
-    
-    section {padding:80px 0;}
-    section h2 {text-align:center; margin-bottom:40px; font-size:2.2rem; color:#4F46E5;}
-    .text-center {text-align:center;}
-    
-    /* Services */
-    .services {display:flex; flex-wrap:wrap; gap:20px; justify-content:center;}
-    .service-card {background:#f4f4f4; padding:30px; border-radius:10px; flex:1 1 250px; max-width:300px; transition:0.3s;}
-    .service-card:hover {transform:translateY(-5px); box-shadow:0 10px 20px rgba(0,0,0,0.1);}
-    
-    /* Portfolio */
-    .portfolio {display:flex; flex-wrap:wrap; gap:20px; justify-content:center;}
-    .portfolio-item {flex:1 1 250px; max-width:300px; border-radius:10px; overflow:hidden; border:1px solid #ddd; transition:0.3s;}
-    .portfolio-item:hover {transform:scale(1.05);}
-    .portfolio-item img {display:block;}
-    .portfolio-item h4 {padding:10px; text-align:center; background:#f4f4f4;}
-    
-    /* Testimonials */
-    .testimonial {background:#f4f4f4; padding:20px; margin:15px; border-radius:10px; max-width:400px; flex:1 1 300px;}
-    .testimonials-container {display:flex; flex-wrap:wrap; gap:20px; justify-content:center;}
-    
-    /* Contact Form */
-    form {max-width:500px; margin:0 auto; display:flex; flex-direction:column; gap:15px;}
-    input, textarea {padding:10px; border-radius:5px; border:1px solid #ccc; width:100%;}
-    button {background:#4F46E5; color:#fff; padding:15px; border:none; border-radius:5px; font-weight:bold; cursor:pointer;}
-    button:hover {background:#3730a3;}
-    
-    footer {background:#333; color:#fff; text-align:center; padding:30px 0;}
-    
-    @media (max-width:768px) {
-      header h1 {font-size:2rem;}
-      .services, .portfolio, .testimonials-container {flex-direction:column; align-items:center;}
+    /* Basic reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background: #f4f4f4; color: #333; }
+
+    /* Header */
+    header {
+      background: #fff;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    header img { height: 60px; }
+
+    /* Hero section */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: #e0f7fa;
+    }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 20px; }
+    .hero p { font-size: 1.2rem; margin-bottom: 40px; }
+
+    /* Mockup gallery */
+    .mockups {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 20px;
+    }
+    .mockups img {
+      width: 300px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transition: transform 0.3s;
+    }
+    .mockups img:hover { transform: scale(1.05); }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: #fff;
     }
   </style>
 </head>
 <body>
 
-  <!-- Hero -->
+  <!-- Header with Logo -->
   <header>
-    <img src="images/logo.png" alt="Kobby Web Design Logo">
-    <h1>Modern, Fast & Professional Websites</h1>
-    <p>I help small businesses grow online with clean, mobile-friendly websites.</p>
-    <a href="#contact" class="btn">Get Your Website Today</a>
+    <img src="logo.png" alt="Your Logo">
   </header>
 
-  <!-- About -->
-  <section id="about">
-    <div class="container text-center">
-      <h2>About Me</h2>
-      <p>Hi, I’m Kobby. I build websites that help businesses look professional online and attract more customers. Fast delivery, clean design, and full ownership for you.</p>
-    </div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to Your Website</h1>
+    <p>Here’s a preview of your amazing work!</p>
   </section>
 
-  <!-- Services -->
-  <section id="services">
-    <div class="container">
-      <h2>Services & Pricing</h2>
-      <div class="services">
-        <div class="service-card">
-          <h3>Starter Website</h3>
-          <p>1–2 page website, mobile responsive, contact button, delivered in 48 hours.</p>
-          <p><strong>$150</strong></p>
-        </div>
-        <div class="service-card">
-          <h3>Standard Website</h3>
-          <p>3–5 page custom website, contact form, basic SEO, delivered in 3–5 days.</p>
-          <p><strong>$250–$350</strong></p>
-        </div>
-        <div class="service-card">
-          <h3>Premium Website</h3>
-          <p>5+ pages, booking forms, portfolio/gallery, custom animations, delivered in 5–10 days.</p>
-          <p><strong>$400–$600</strong></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Portfolio -->
-  <section id="portfolio">
-    <div class="container">
-      <h2>Portfolio</h2>
-      <div class="portfolio">
-        <div class="portfolio-item">
-          <img src="images/barber-shop.png" alt="Barber Shop Website">
-          <h4>Barber Shop</h4>
-        </div>
-        <div class="portfolio-item">
-          <img src="images/clothing-brand.png" alt="Clothing Brand Website">
-          <h4>Clothing Brand</h4>
-        </div>
-        <div class="portfolio-item">
-          <img src="images/trainer-website.png" alt="Personal Trainer Website">
-          <h4>Personal Trainer</h4>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section id="testimonials">
-    <div class="container">
-      <h2>What Clients Say</h2>
-      <div class="testimonials-container">
-        <div class="testimonial">
-          <p>"Kobby built our website in just 3 days and it looks amazing!"</p>
-          <p><strong>– Barber Shop Owner</strong></p>
-        </div>
-        <div class="testimonial">
-          <p>"Our clothing store website finally matches our brand. Highly recommended!"</p>
-          <p><strong>– Clothing Brand Owner</strong></p>
-        </div>
-        <div class="testimonial">
-          <p>"Kobby’s website helped me get more clients every week. Fast and professional!"</p>
-          <p><strong>– Personal Trainer</strong></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <p class="text-center">Send me a message on Instagram: <strong>@kobbywebdesign</strong></p>
-      <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
+  <!-- Mockup Gallery -->
+  <section class="mockups">
+    <img src="mockup1.png" alt="Website Mockup 1">
+    <img src="mockup2.png" alt="Website Mockup 2">
+    <img src="mockup3.png" alt="Website Mockup 3">
+    <!-- Add more mockups if needed -->
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Kobby Web Design</p>
+    &copy; 2025 Your Company. All rights reserved.
   </footer>
 
 </body>
