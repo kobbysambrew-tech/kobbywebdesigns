@@ -244,22 +244,28 @@
 
   <!-- Contact -->
   <section id="contact">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <p class="text-center">Send me a message on Instagram: <strong>@kobbywebdesign</strong></p>
-      <form action="https://formsubmit.co/kobbysambrew@gmail.com" method="POST">
-<input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_template" value="box">
-<input type="hidden" name="_subject" value="New message from Kobby Web Design">
-<input type="hidden" name="_autoresponse" value="Thanks for reaching out! I will reply shortly.">
+  <div class="container">
+    <h2>Contact Me</h2>
+    <p class="text-center">Send me a message below — I reply within 24 hours.</p>
 
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-  </section>
+    <form action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST">
+      
+      <!-- FormSubmit settings -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="box">
+      <input type="hidden" name="_subject" value="New message from Kobby Web Design">
+      <input type="hidden" name="_autoresponse" value="Thanks for your message! I will reply shortly.">
+
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+  </div>
+</section>
+
 
   <!-- Footer -->
   <footer>
