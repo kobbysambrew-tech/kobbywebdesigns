@@ -31,7 +31,7 @@
 
     header h1 {font-size:2.8rem; margin-bottom:15px;}
     header p {font-size:1.2rem; margin-bottom:30px;}
-    .btn {background:#FFB800; color:#fff; padding:15px 30px; border-radius:5px; font-weight:bold; transition:0.3s;}
+    .btn {background:#FFB800; color:#fff; padding:15px 30px; border-radius:999px; font-weight:bold; transition:0.3s;}
     .btn:hover {background:#e6a200;}
     
     section {padding:80px 0;}
@@ -66,6 +66,56 @@
       header h1 {font-size:2rem;}
       .services, .portfolio, .testimonials-container {flex-direction:column; align-items:center;}
     }
+   
+.fade-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+.fade-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+  /* Slider */
+  .slider {
+    position: relative;
+    overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  .slide {
+    min-width: 100%;
+    text-align: center;
+  }
+  .slide img { border-radius: 10px; margin-bottom: 10px; }
+
+  /* Slider buttons */
+  .slider button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(79, 70, 229, 0.8);
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    transition: 0.3s;
+  }
+  .slider button:hover { background: rgba(79, 70, 229, 1); }
+  .prev { left: 10px; }
+  .next { right: 10px; }
+
+  @media (max-width:768px) {
+    .slider button { font-size: 1.5rem; padding: 7px 10px; }
+  }
   </style>
 </head>
 <body>
@@ -79,14 +129,14 @@
   </header>
 
 <!-- About Me Section -->
-<section id="about-me" class="bg-white py-24">
-  <div class="container mx-auto px-6 text-center">
-    <h2 class="text-5xl font-bold text-gray-800 mb-8 fade-scroll">About Me</h2>
-    <p class="text-lg md:text-xl text-gray-600 mb-12 max-w-3xl mx-auto fade-scroll leading-relaxed">
+<section id="about">
+  <div class="about container">
+    <h2 class="about-title">About Me</h2>
+    <p class="about-text">
       Hi, I’m Kobby! I specialize in creating modern, high-quality websites for businesses and entrepreneurs. My goal is to help your brand stand out online, combining speed, reliability, and custom solutions tailored to your needs.  
       I’ve worked on 15+ projects and love turning ideas into websites that attract and convert clients.
     </p>
-    <a href="https://www.instagram.com/kobbywebdesign" target="_blank" class="inline-block text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-300 font-semibold py-3 px-8 rounded-2xl fade-scroll">
+    <a href="https://www.instagram.com/kobbywebdesign" class="about-link">
       Follow me on Instagram
       @kobbywebdesign
     </a> 
@@ -118,41 +168,30 @@
     </div>
   </section>
 <!-- Why Choose Me Section -->
-<section id="why-choose-me" class="bg-gray-100 py-24">
-  <div class="container mx-auto px-6 text-center">
-    <h2 class="text-5xl font-bold text-gray-800 mb-10 fade-scroll">Why Choose Me</h2>
-    <p class="text-lg md:text-xl text-gray-600 mb-16 max-w-3xl mx-auto fade-scroll leading-relaxed">
+<section id="why-choose-me" class="why">
+  <div class="container">
+    <h2 class="why-heading">Why Choose Me</h2>
+    <p class="why-text">
       I deliver high-quality, reliable solutions with speed and precision. Here’s why clients keep coming back:
     </p>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-      <div class="bg-white p-8 rounded-2xl shadow-lg transform hover:scale-105 transition-transform duration-500 fade-scroll">
-        <h3 class="text-3xl font-semibold mb-6">Fast Delivery</h3>
-        <p class="text-gray-600 text-lg leading-relaxed">I work efficiently without compromising on quality, ensuring your projects are completed on time.</p>
+    <div class="why-grid">
+      <div class="why-card">
+        <h3 class="why-title">Fast Delivery</h3>
+        <p class="why-text">I work efficiently without compromising on quality, ensuring your projects are completed on time.</p>
       </div>
-      <div class="bg-white p-8 rounded-2xl shadow-lg transform hover:scale-105 transition-transform duration-500 fade-scroll">
-        <h3 class="text-3xl font-semibold mb-6">Reliable & Trusted</h3>
-        <p class="text-gray-600 text-lg leading-relaxed">Clients trust me to deliver consistently excellent results and maintain clear communication throughout.</p>
+      <div class="why-card">
+        <h3 class="why-title">Reliable & Trusted</h3>
+        <p class="why-text">Clients trust me to deliver consistently excellent results and maintain clear communication throughout.</p>
       </div>
-      <div class="bg-white p-8 rounded-2xl shadow-lg transform hover:scale-105 transition-transform duration-500 fade-scroll">
-        <h3 class="text-3xl font-semibold mb-6">Custom Solutions</h3>
-        <p class="text-gray-600 text-lg leading-relaxed">I tailor every project to your unique needs, ensuring solutions are a perfect fit for your goals.</p>
+      <div class="why-card">
+        <h3 class="why-title">Custom Solutions</h3>
+        <p class="why-text">I tailor every project to your unique needs, ensuring solutions are a perfect fit for your goals.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Animations -->
-<style>
-.fade-scroll {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease-out;
-}
-.fade-scroll.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-</style>
+
 
 <!-- Scroll Trigger Script -->
 <script>
@@ -221,47 +260,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </section>
 
-<style>
-  /* Slider */
-  .slider {
-    position: relative;
-    overflow: hidden;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-  .slide {
-    min-width: 100%;
-    text-align: center;
-  }
-  .slide img { border-radius: 10px; margin-bottom: 10px; }
 
-  /* Slider buttons */
-  .slider button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(79, 70, 229, 0.8);
-    color: #fff;
-    border: none;
-    font-size: 2rem;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 50%;
-    z-index: 10;
-    transition: 0.3s;
-  }
-  .slider button:hover { background: rgba(79, 70, 229, 1); }
-  .prev { left: 10px; }
-  .next { right: 10px; }
-
-  @media (max-width:768px) {
-    .slider button { font-size: 1.5rem; padding: 7px 10px; }
-  }
-</style>
 
 <script>
   const slides = document.querySelector('.slides');
